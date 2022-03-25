@@ -1,0 +1,87 @@
+/* 서유빈 단독 작성*/
+
+
+@keyframes fadein { 
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#login_photo {
+    width: 100%;
+    position: relative;
+}
+#login_content{
+    /* photo 기준으로 글자 위치 잡기 */
+    position: absolute;
+    left: 10%;
+    top: 32%;
+}
+#login_content > #login_txt_1{
+    /* 아르르와 함께하는 일상으로의 초대_글씨 */
+    font-size: 33pt;
+    color: #477A7B;
+    font-family: 'GmarketSansTTFMedium';
+    font-stretch: condensed;
+    letter-spacing: -3px;
+}
+#login_content > #login_txt_2{
+    /* 카카오 간편 회원가입 시 2천원 할인쿠폰 증정_글씨 */
+    font-size: 12pt;
+    color: #4c4c4c;
+    font-family: 'GmarketSansTTFLight';
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+#login_content > #login_txt_3{
+    /* 마케팅 수신 전체 동의_글씨 */
+    font-size: 8pt;
+    font-family: 'GmarketSansTTFLight';
+    color: #777;
+    margin-bottom: 20px;
+}
+#login_content > #login_button > div > button{
+    /* 가입하기 버튼 사이즈 */
+    height: 50px;
+    width: 400px;
+}
+#login_content > #login_button > div:first-child > button{
+    /* 카카오톡 가입 버튼*/
+    margin-bottom: 5px;
+    background-color: #fee500;
+    border: 0;
+}
+#login_content > #login_button > div:first-child > button > a{
+    /* 카카오톡 가입 버튼 내_글씨*/
+    color: black;
+    text-align: center;
+    padding: 15px 117px;
+    font-family: 'GmarketSansTTFMedium';
+}
+#login_content > #login_button > div:last-child > button{
+    /* 다른 방법 가입 버튼*/
+    margin-bottom: 5px;
+    background-color: transparent;
+    border: 1px solid #477a7b;
+    color: #477a7b;
+}
+#login_content > #login_button > div:last-child > button > a{
+    /* 다른 방법 가입 버튼 내 _글씨*/
+    color: #477a7b;
+    text-align: center;
+    padding: 15px 103px;
+    font-family: 'GmarketSansTTFMedium';
+}
+#login_content > #login_button > div:first-child > button:hover{
+    /* 카카오톡 가입 버튼 호버 시, 글씨 흰색 */
+    background-color: rgb(255, 213, 77);
+    transition: 1s;
+}
+#login_content > #login_button > div:last-child > button:hover{
+    /* 다른 당법 가입 버튼 호버 시, 버튼 배경 흰색 */
+    background-color: white;
+    transition: 1s;
+}

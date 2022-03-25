@@ -1,0 +1,49 @@
+/* 황선애 단독 작성 */
+
+
+/*section6 바탕  및 글자 부모 */
+#section6{
+    position: relative;
+}
+  
+/*section6 img */
+#brand_photo{
+    width: 100%;
+    height: auto;
+}
+  
+/* 글자위치 선정 */
+#brand_txt{
+    position:absolute;
+    top: 40%;
+    left: 7%;
+}
+/*section6 브랜드 스토리 보러가기 hover */
+#brand_txt a:hover{
+    background: #477A7B;
+    color: white;
+}
+/*section6 아르르~ 글자  */
+#brand_txt h1 {
+    display: block;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-bottom: 15px;
+    color: #477A7B;
+    font-family: 'GmarketSansTTFMedium';
+} 
+/*section6  브랜드 보러가기 글자*/
+#brand_txt a {
+    text-align: center;
+    font-size: 16px;
+    line-height: 2em;
+    color: #477A7B;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0 0;
+    border: 1px solid #477A7B;
+    border-radius: 50px;
+    font-family: 'GmarketSansTTFMedium';
+}
+  

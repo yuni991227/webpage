@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>아르르 arrr_주문조회</title>
+    <style>
+        @import url('./arrr_header.css');
+        @import url('./arrr_order_info.css');
+        @import url('./arrr_footer.css');
+    </style>
+    <style>
+        @font-face {
+            font-family: GmarketSansTTFLight;
+            src: url("./fonts/GmarketSansTTFLight.ttf");
+        }
+        @font-face {
+            font-family: GmarketSansTTFMedium;
+            src: url("./fonts/GmarketSansTTFMedium.ttf");
+        }
+        @font-face {
+            font-family: GmarketSansTTFBold;
+            src: url("./fonts/GmarketSansTTFBold.ttf");
+        }
+        @font-face {
+            font-family: MapoPeacefull;
+            src: url("./fonts/MapoPeacefull.ttf");
+        }
+    </style>
+    <!-- 기본 적용 css -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, li , a{
+		    list-style: none;
+            text-decoration: none;
+	    }
+    </style>
+<!--  script 서유빈 작성 -->    
+<script>
+    $(pageLoadedHandler)
+    function pageLoadedHandler(){
+        //돋보기 버튼을 눌렀을 때
+        $("#searchbtn").on("click",function(){
+            $("#search_div").slideDown();      // 검색창이 내려오게
+            $("#cancel_btn_img").on("click",function(){ // x버튼을 누르면
+                $("#search_div").slideUp();             // 검색창이 올라가게
+            });
+            $("#minus_header").on("click",function(){   // 헤더 제외 section을 눌러도
+                $("#search_div").slideUp();             // 검색창이 올라가게
+            });
+        });
+    }
+</script>
+</head>
+<body>
+<!-- header 서유빈 작성 -->
+    <header>
+        <div id="header_all">
+            <div id="logo">
+                <a href="./arrr_main.html">
+                    <img src="./images/logo.svg">
+                </a>
+            </div> 
+            <div id="menu">   
+                <ul>
+                    <li class="main_menu" id="product"> 
+                        <h3 class="main_menu_name">PRODUCT</h3>
+                        <ul class="dropdown_menu">
+                            <li><a href="#">all</a></li>
+                            <li><a href="#">new</a></li>
+                            <li><a href="#">living</a></li>
+                            <li><a href="#">walking</a></li>
+                            <li><a href="#">clean</a></li>
+                            <li><a href="#">food</a></li>
+                            <li><a href="#">sale</a></li>
+                        </ul>
+                    </li>
+                    <li class="main_menu">
+                        <h3 class="main_menu_name">│</h3>
+                        <ul class="dropdown_menu">
+                            <li><li>
+                        </ul>
+                    </li>
+                    <li class="main_menu" id="editorial">
+                        <h3 class="main_menu_name">EDITORIAL</h3>
+                        <ul class="dropdown_menu">
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">lookbook </a></li>
+                            <li><a href="#">journal</a></li>
+                        </ul>
+                    </li>
+                    <li class="main_menu">
+                        <h3 class="main_menu_name">│</h3>
+                        <ul class="dropdown_menu">
+                            <li><li>
+                        </ul>
+                    </li>
+                    <li class="main_menu" id="cscenter">
+                        <h3 class="main_menu_name">CS CENTER</h3>
+                        <ul class="dropdown_menu">
+                            <li><a href="#">cs home</a></li>
+                            <li><a href="#">review</a></li>
+                            <li><a href="#">event</a></li>
+                            <li><a href="#">notice</a></li>
+                            <li><a href="#">faq</a></li>
+                            <li><a href="#">q&a</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="sub">
+                <ul>
+                    <li class="sub_menu">
+                        <a href="./arrr_login_info.html">로그인</a>
+                    </li>
+                    <li class="sub_menu">
+                        <a href="./arrr_login_info.html">회원가입</a>
+                    </li>
+                    <li class="sub_menu">
+                        <a href="./arrr_order_info.html">주문조회</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="ct">
+                <ul>
+                    <li class="content_menu">
+                        <a href="#"><img src="./images/ico_search.svg" id="searchbtn"></a>
+                    </li>
+                    <li class="content_menu">
+                        <a href="#"><img src="./images/ico_recent.svg"></a>
+                    </li>
+                    <li class="content_menu">
+                        <a href="#"><img src="./images/ico_cart.svg"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search_div">
+                <div id="search_cancel">
+                    <a href="#"><img src="./images/ico_close.svg" id="cancel_btn_img"></a>
+                </div>
+                <div id="s_d">
+                    <div>
+                        <input type="text" name="search" value=" ">
+                        <img src="./images/ico_search.svg">
+                    </div>
+                    <p>추천 검색어</p>
+                    <div>
+                        <a href="#"><input type="button" value="UFO 넥카라"></a>
+                        <a href="#"><input type="button" value="고잉백"></a>
+                        <a href="#"><input type="button" value="꿀잠 방석"></a>
+                        <a href="#"><input type="button" value="논슬립 슬라이드 계단"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="back">
+            </div>
+        </div>
+    </header>
+
+    <div id="minus_header">
+<!-- content 이소윤 작성 -->
+        <div id="member_order_section">
+            <div id="member_page_title">
+                <h2>LOGIN</h2>
+            </div>
+            <form action="#" method="post" id="member_info">
+                <input type="text" name="id" placeholder="아이디">
+                <input type="password" name="pwd" placeholder="비밀번호">
+                <a href="#">기억이 나지않으신가요?</a>
+                <div class="clear">
+                    <div>
+                        <button type="submit"><a href="#">로그인</a></button>
+                    </div>
+                    <div>
+                        <button type="button"><a href="#">회원가입</a></button>
+                    </div>
+                </div>
+                <br>
+                <div id="sns_login">
+                    <div>
+                        <button type="button">
+                            <a href="#">
+                                <img src="./images/icon-kakao_login.svg" width="20" style="vertical-align: middle;">
+                                카카오톡 로그인 / 가입하기
+                            </a>
+                        </button>
+                    </div>
+                    <div id="kakaoMsg">
+                        <p>카카오 간편 회원가입 시 2천원 할인쿠폰 증정</p>
+                        <p>마케팅 수신 전체 동의 시 쿠폰이 제공됩니다.</p>
+                    </div>
+                    <div id="naver_login">
+                        <a href="#">
+                            <img src="./images/icon_naver_login.svg" width="20" style="vertical-align: middle;">    
+                            네이버 로그인
+                        </a>
+                    </div>
+                    <div id="facebook_login">
+                        <a href="#">
+                            <img src="./images/icon_facebook_login.svg" width="20" style="vertical-align: middle;">
+                            페이스북 로그인
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="nonmember_order_section">
+            <div id="nonmember_page_title">
+                <h3>비회원 주문조회</h3>
+                <p>
+                    비회원으로 주문하신 고객께서는
+                    <br>
+                    아래의 정보로 주문조회가 가능합니다.
+                </p>
+            </div>
+            <form action="#" method="post" id="nonmember_info">
+                <input type="text" id="order_name" placeholder="주문자명">
+                <input type="text" id="order_id" placeholder="하이픈(-) 포함">
+                <input type="password" id="order_pwd" placeholder="비회원주문 비밀번호">
+                <button type="submit"><a href="#">주문조회</a></button>
+            </form>
+        </div>
+<!-- footer 이소윤 작성 -->
+        <footer>
+            <footer>
+                <div id="fixedToTop">
+                    <a href="#header_all" class="totop">
+                        <img src="./images/btn_top.svg">
+                    </a>
+                </div>
+                <div class="footerTop" style="margin-top: 150px;">
+                    <div class="footerTop_space">&nbsp;</div>
+                    <div class="footerTop_text">
+                        <a href="#1">브랜드스토리 | </a>
+                        <a href="#1"> 이용약관 | </a>
+                        <a href="#1"> 개인정보처리방침 | </a>
+                        <a href="#1"> 이용안내</a>
+                    </div>
+                    <div class="footerTop_icon">
+                        <a class="social_icon" href="//pf.kakao.com/_Gxgbas/chat" target="_blank">
+                            <img src="./images/ico_kakaotalk.svg">
+                        </a>
+                        <a class="social_icon" href="https://www.instagram.com/arrr_official/" target="_blank">
+                            <img src="./images/ico_instagram.svg">
+                        </a>
+                        <a class="social_icon" href="https://www.facebook.com/Arrr-%EC%95%84%EB%A5%B4%EB%A5%B4-1665445193561447/" target="_blank">
+                            <img src="./images/ico_facebook.svg">
+                        </a>
+                        <a class="social_icon" href="https://www.youtube.com/channel/UCQREukW3CURgQMAWnFsjW9Q" target="_blank">
+                            <img src="./images/ico_youtube.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="footerBottom">
+                    <div class="footerBottom_section1">
+                        <h1>02 - 6951 - 2688</h1>
+                        <div>
+                            <p>AM 09:00 ~ PM 18:00</p>
+                            <p>PM 12:00 ~ 13:00 (Lunch)</p>
+                            <p>SAT, SUN, HOLIDAY OFF</p>
+                            <br>
+                            <p>CS Email. arrr@meta-m.co.kr</p>
+                            <p>카카오톡 플러스친구. @아르르</p>
+                        </div>
+                    </div>
+                    <div class="footerBottom_section2">
+                        <h1>BANK INFO</h1>
+                        <div>
+                            <p>BANK 신한은행 140-011-787430</p>
+                            <p>예금주 : (주)블랭크코퍼레이션</p>
+                        </div>
+                        <br>
+                        <br>
+                        <h1>아르르 사업 문의</h1>
+                        <div>
+                            <p>마케팅제휴 문의 : arr_biz@blankcorp.co.kr</p>
+                            <p>해외수출 문의 : global@blankcorp.kr</p>
+                            <a href="#1">사입/도매/입점 문의 바로가기 > </a>
+                        </div>
+                    </div>
+                    <div class="footerBottom_section3">
+                        <a href="./arrr_main.html">
+                            <img src="./images/footer_logo.svg">
+                        </a>
+                        <p>BLANK Corporation</p>
+                        <p>CEO. DaeKwangNam | TEL. 02-6951-2688 | E-MAIL. arrr_biz@blankcorp.kr</p>
+                        <p>ADDRESS. 3th floor, 311, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea, 06151</p>
+                        <p>
+                            BUSINESS NO. 359-87-00301 | MAIL ORDER LICENSE. 제2016-서울강남-01468호 
+                            <a href="#1">[사업자정보확인]</a>
+                        </p>
+                        <br>
+                        <p>&copy; 2020</p>
+                    </div>
+                </div>
+            </footer>
+        </footer>
+    </div> <!-- minus_header 종료 -->
+</body>
+</html>

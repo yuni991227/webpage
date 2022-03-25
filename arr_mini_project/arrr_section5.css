@@ -1,0 +1,164 @@
+/* 황선애 단독 작성 */
+
+
+/* section5 상품 둥실둥실 애니메이션 */
+@keyframes imgUpDown {
+    from{
+        transform: translatey(10px);
+    }
+    to{
+        transform: translatey(-30px);
+    }
+}
+ /* section5 상품 둥실둥실 애니메이션 */
+ @keyframes shadowUpDown {
+    from{
+        transform: translatey(0px);
+    }
+    to{
+        transform: translatey(-30px);
+    }
+}
+/* section5 바탕 */
+#section5 {
+    background-color: #F4EDDC;
+    padding: 80px 0 0;
+    overflow: hidden;         
+}
+/*  RECOMMEND PRODUCT 글자 */
+#setion5_tilte {
+    display: block;
+    text-align: center;
+    color: #477A7B;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin: 0px 0 30px;
+    padding: 0 10px 20px;
+    line-height: 1.2em;
+    font-family: MapoPeacefull;
+}
+/* section5  상품 바탕 */
+#section5_product {
+    position: relative;
+    /* 화면에 상품 6개만 보이도록 높이 지정 */
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+}
+  /* section5 이동 감추기  */
+#section5_product_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* overflow: hidden; */
+}
+#section5_product_wrapper.animated{
+    transition: 0.5s ease-out;
+}
+#section5_product_wrapper > .carousel-cell {
+    box-sizing: border-box;
+    width: 400px;
+    height: 400px;
+    padding: 2%;
+    float: left;
+    position: relative;
+}
+/* section5 상품이미지  */
+.section5_product_txt > .section5_img {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 15%;
+    vertical-align: middle;
+    animation: imgUpDown 2.0s ease-in-out infinite alternate;
+}
+/* 이미지 홀수 짝수  움직이기*/
+.carousel-cell:nth-child(2n) .section5_img{
+    -webkit-animation-delay: 0; 
+    animation-delay: 0;  
+}
+.carousel-cell:nth-child(2n+1) .section5_img{
+    -webkit-animation-delay: 1.5s; 
+    animation-delay: 1.5s; 
+}
+/* section5 상품이미지  마우스 오버시 이미지 투명하게 */
+.section5_product_txt > .section5_img:hover {
+    opacity: 0.5;
+}
+/* section5  상품 이름 설명 글자  공통 */
+.section5_product_txt {
+    width: 100%;
+    height: 100%;
+    color:#4c4c4c;
+    text-align: center;
+    font-family: 'GmarketSansTTFMedium';
+    position: absolute;
+    top: 10%;
+    left: 15px;
+}
+/* section5 상품이름 글자 */
+.section5_product_txt > h1 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin-bottom: 5px;
+}
+/* section5 상품가격 글자 */
+.section5_product_txt > p {
+    font-size: 15px;
+    line-height: 1.6em;
+}
+/* section5 상품 이동 버튼 */
+#section5_prev_button {
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+#section5_next_button {
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+ /* 상품 그림자 애니메이션 -이상하게 작동 */
+.carousel-cell:nth-child(2n)::after {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+   
+}
+.carousel-cell:nth-child(2n+1)::after {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+/* 상품 그림자  이상하게 작동 */
+.carousel-cell::after {
+    content: '';
+    position: absolute;
+    left: 35%;
+    bottom: 0%;
+    width: 40%;
+    height: 7px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background: rgba(0,0,0,0.35);
+    filter: blur(4px);
+    margin: 0px auto -40px;
+    animation: imgUpDown 3.0s ease-in-out infinite;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 9;
+    opacity: 0.2;
+}

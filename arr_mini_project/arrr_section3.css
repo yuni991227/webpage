@@ -1,0 +1,202 @@
+/* 이진정 단독 작성 */
+
+/* <!-- 전체 --> */
+
+    *{margin: 0; padding: 0;}
+ 
+    
+    /* body {
+        width: 100%;
+        height: 100%;
+        min-height: -webkit-fill-available;
+        margin: 0;
+        padding: 0;
+        font-family: 'SpoqaHanSans','Helvetica','Arial','애플SD 고딕네오','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum',sans-serif;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 1.8em;
+        letter-spacing: 0;
+        vertical-align: baseline;
+        color: #4c4c4c;
+        background: #fff;
+        word-break: normal;
+        cursor: default;
+        font-synthesis: none;
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    } */
+
+/* <!-- 박스 사진부분 열맞추기 --> */
+
+    .moreItems{display: none;  
+        padding-inline-start: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;}
+
+    .widthHolder {
+        margin: 0 auto;
+        padding: 0 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        max-width: 1000px;
+    }
+    
+    .prdList{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        overflow: hidden; 
+        padding-inline-start: 10px;
+    }
+
+    .prdList .grid-box .prdImg img {
+        width: 100%;
+        height: auto;
+  
+    }
+    .prdList2 .grid-box2 .prdImg img {
+        width: 100%;
+        height: auto;
+
+    }
+    .grid-box {
+        margin: 0 0 20px;
+        color: #757575;
+        /* width: 25%; */
+        border-right: 10px solid transparent;
+        position: relative;
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .grid-box2 {
+        margin: 0 0 20px;
+        color: #757575;
+        width: 100%;
+        border-right: 10px solid transparent;
+        position: relative;
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+
+/* <!-- hover, 더보기 기능 --> */
+
+    /* 더보기 */
+    #loadMore{
+        position: relative;
+        color: #477A7B;
+        font-weight: bold;
+        border: none;
+        border-bottom: 1px solid #477A7B;
+        padding: 0 10px;
+        font-family:'GmarketSansMedium';
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        margin: 30px auto 50px;
+        cursor: pointer;
+    }
+    /* hover */
+    .prdImg img:last-child {display: none;}
+    .prdImg:hover img:first-child{display: none;}
+    .prdImg:hover img:last-child{display: inline-block;}
+
+    .prdBag:hover img{opacity: 0.7;}
+
+    #loadMore:hover {opacity: 0.7;}
+
+/* <!-- font  --> */
+
+    @font-face {
+        font-family: 'GmarketSansBold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    .spanfont {
+        font-size: 14px;
+        color: #4c4c4c;
+        /* font-weight: bold; */
+        font-family: 'GmarketSansBold';
+    } 
+    .description .name {
+        line-height: 0.5em;
+    }
+    .origin_price{
+        font-size:13px;color:#4c4c4c;
+        text-decoration:line-through;
+        font-family: 'GmarketSansMedium';
+        line-height: 1em;
+    }
+    .sale_price{
+        font-size:13px;
+        color:#4c4c4c;
+        font-family: 'GmarketSansMedium';
+    }
+    
+    /*  ALL PRODUCT 글자 */
+    .sectionT{
+        font-family:'MapoPeacefull';
+        display: block;
+        text-align: center;
+        background-color: #fff;
+        color: #477A7B;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+        margin: 0 0 30px;
+        padding: 0 10px;
+        line-height: 1.2em;
+        font-size: 30px;
+    }
+
+/* <!-- 컬러칩, 장바구니 열맞추기 --> */
+
+    .chips{
+        float: left;
+        width: 20px;
+        height: 20px;
+        margin: 0 4px 4px 0;
+        border: 0;
+        font-size: 0;
+        line-height: 0;
+        /* align-self: flex-end; */
+    }
+    
+    .prdBag img{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 30px;
+        height: 30px;
+    }
+
+   /* media*/
+    @media screen and (max-width: 900px){
+        .prdList{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .moreItems{
+            display: none;  
+            grid-template-columns:1fr 1fr;}
+    }
+  

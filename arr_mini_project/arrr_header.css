@@ -1,0 +1,257 @@
+/* 서유빈 단독 작성*/
+
+
+@keyframes fadein { 
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*헤더 기본*/
+header{
+    width: 100%;
+    padding: 0;
+    position: relative;
+    z-index: 999;
+}
+header:hover{
+    /* 헤더 호버 시, 배경 변경  */
+    background-color: white;
+    transition: ease 0.5s;
+}
+#header_all{
+    position: relative;
+}
+
+#minus_header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+/*로고*/
+#logo{
+    padding: 10px;
+}
+/*메인 메뉴*/
+#menu{
+    /* 메인 메뉴_블럭 */
+    font-family:'MapoPeacefull';
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden; /* 드롭다운 메뉴 숨기기*/
+}
+.main_menu{
+    /*메인 메뉴 3가지_블럭*/
+    float: left;
+    padding: 0 7.5px;
+    color: #477A7B;
+    position: relative;
+    /* transition: color 0.7s; */
+}
+.main_menu_name{
+    /*메인 메뉴 3가지_글씨*/
+    text-align: center;
+    letter-spacing: 1.7px;
+    font-size: larger;
+    padding: 39px 0;
+    box-sizing: border-box;
+}
+.main_menu:nth-of-type(2) > .main_menu_name , .main_menu:nth-of-type(4) > .main_menu_name {
+    /* 메인 메뉴 3가지 사이 얇은 바_글씨*/
+    font-weight:lighter;
+    opacity: 0.2;
+}
+
+/*드롭다운 메뉴*/
+.dropdown_menu{
+    /* 드롭다운 메뉴_블럭 */
+    width:100%;
+    height: 300px;
+    position: absolute;
+    top: 100px;
+    text-align: center;
+    display: none;
+    margin: 0 -7px;
+}
+.dropdown_menu > li{
+    /* 드롭다운 메뉴 내, 소메뉴_블럭 */
+    padding: 10px 29px;
+    letter-spacing: 0.7px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.dropdown_menu > li > a{
+     /* 드롭다운 메뉴 내, 소메뉴_글씨 */
+     color: #c6d6d6;
+}
+#back{
+    /*드롭다운 메뉴 뒤, 흰색 배경*/
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    z-index:-1;
+    display: block;
+}
+#menu:hover{
+    /* 메인 메뉴 호버 시, 드롭다운 메뉴 보이기 */
+    overflow: visible;
+}
+#menu:hover > ul > .main_menu > .dropdown_menu{
+    display: block;
+    animation: fadein 2s;
+}
+#menu:hover > ul > .main_menu{
+    /* 메인 메뉴 호버 시, 모든 글씨 색상 연하게 */
+    color: #c6d6d6;
+}
+#menu:hover ~ #back{
+    /*메뉴 호버 시, 드롭다운 메뉴 뒤 흰색 배경 보이게*/
+    height: 400px;
+    transition: ease 0.5s;
+}
+
+#product:hover > .main_menu_name , #product:hover > .dropdown_menu > li > a,
+#editorial:hover > .main_menu_name , #editorial:hover > .dropdown_menu > li > a,
+#cscenter:hover > .main_menu_name, #cscenter:hover > .dropdown_menu > li > a {
+    /* product & editorial & cs center 호버 시, 글씨 및 소메뉴 글씨 색상 진하게 */
+    color: #477A7B;
+}
+
+.dropdown_menu> li:hover > a {
+    /* 드롭다운 메뉴 내, 소메뉴 호버 시 bold */
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+/*서브메뉴*/
+#sub{
+    position: absolute;
+    float: right;
+    top: 40px;
+    right: 140px;
+}
+.sub_menu{
+    /* 서브 메뉴 내, 소메뉴_블럭 */
+    float: left;
+    font-size: 9.5pt;
+    margin: 0 5px;
+}
+.sub_menu > a {
+    /* 서브 메뉴 내, 소메뉴_글씨 */
+    color: #477A7B;
+    font-family:'GmarketSansTTFLight';
+    font-weight: 600;
+}
+.sub_menu > a:hover {
+    /* 서브 메뉴 호버 시, 글씨 투명도 */
+    transition: all 0.6s;
+    opacity: 0.5;
+}
+
+/*콘텐츠 메뉴*/
+#ct{
+    position:absolute;
+    top: 30px;
+    right: 10px;
+}
+.content_menu {
+    /* 콘텐츠 메뉴 내, 소메뉴_블럭 */
+    float: left;
+}
+.content_menu > a:hover{
+    /* 콘텐츠 메뉴 호버 시, 글씨 투명도 */
+    opacity: 0.5;
+    transition: all 0.6s;
+}
+.content_menu > a > img {
+    /* 콘텐츠 메뉴 내, 아이콘 크기 */
+    width: 40px;
+    height: 40px;
+}
+
+#search_div{
+    /* 검색창 기본 */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background-color: white;
+    display: none;
+}
+#search_cancel > a > #cancel_btn_img{
+    /* 검색창 내, x 버튼 이미지*/
+    width: 30px;
+    position: absolute;
+    top: 15%;
+    right: 1%;
+}
+#s_d{
+    /* 검색창 내, 요소 묶음 (x버튼 이미지 제외) */
+    width: 100%;
+    max-width:450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+}
+#s_d >div:first-child > input[type='text']{
+    /* 검색창 내, 검색바 */
+    border: transparent;
+    border-bottom: 1px solid #477A7B;;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 40px;
+    text-align: center;
+    color: #477A7B;
+    font-family: 'GmarketSansTTFMedium';
+    font-size: large;
+    padding: 5px 0;
+    outline: none;
+}
+#search_div > #s_d > div:first-child > img{
+    /* 검색창 내, 검색바 우측 돋보기 이미지 */
+    margin-top: 30px;
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#s_d > p{
+    /* 검색창 내, 추천 검색어 글씨 */
+    text-align: center;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: bolder;
+    margin: 30px 0 15px 0;
+    color: #477A7B;   
+}
+#s_d > div:last-child{
+    /* 검색창 내, 제품명 버튼 묶음 */
+    text-align: center;
+}
+#s_d > div:last-child > a > input[type="button"]{
+    /* 검색창 내, 제품명 버튼 */
+    height: 33px;
+    padding: 0 13px;
+    font-size: 13px;
+    background: #f3f3f3;
+    color: #477A7B;  
+    border: 0;
+    border-radius: 20px;
+    font-family: 'GmarketSansTTFMedium';
+}
+#s_d > div:last-child > a > input[type="button"]:hover{
+    /* 검색창 내, 제품명 버튼 호버 시 색상 변경 */
+    color: white;
+    background: #477A7B; 
+    transition: ease 0.7s;
+}

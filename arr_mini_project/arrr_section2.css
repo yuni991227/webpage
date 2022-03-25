@@ -1,0 +1,68 @@
+/* 이소윤 단독 작성 */
+
+
+/* 이미지 슬라이드 정의 */
+@keyframes img_slider {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7))}
+}
+#section2 {
+    width: 100%;
+    height: 500px;
+    background-color: #f9f9ef;
+    text-align: center;
+    font-family: 'GmarketSansTTFMedium';
+    overflow: hidden;
+}
+
+#section2 .slider {
+    height: 500px;
+    overflow:hidden;
+    width: 100%;
+}
+
+/* 위에서 정의한 애니메이션 적용 */
+#section2 .slide-track {
+    animation: img_slider 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+/* section2 부분에 마우스 오버 시 슬라이드 멈추도록 적용 */
+#section2 .slide-track:hover {
+    animation-play-state: paused;
+}
+#section2 .slide {
+    height: 500px;
+    width: 250px;
+    padding: 25px 30px 0;
+}
+
+#section2 a {
+    padding: 10px;
+    display: block;
+}
+#section2 img {
+    border: 1px solid #ececec;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+/* 사진에 마우스 오버시 이미지 투명하게 */
+#section2 img:hover {
+    opacity: 0.5;
+}
+/* 제품 이름의 글씨 */
+#section2 h1 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+    color: #477A7B;
+}
+/* 제품 설명의 글씨 */
+#section2 p {
+    font-size: 13px;
+    line-height: 1.6em;
+    color: #4c4c4c;
+}

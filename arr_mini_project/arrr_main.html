@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css?after">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>아르르 arrr</title>
+    <style>
+        @import url('./arrr_header.css');
+        @import url('./arrr_section1.css');
+        @import url('./arrr_section2.css');
+        @import url('./arrr_section3.css');
+        @import url('./arrr_section4.css');
+        @import url('./arrr_section5.css');
+        @import url('./arrr_section6.css');
+        @import url('./arrr_footer.css');
+    </style>
+    <style>
+        @font-face {
+            font-family: GmarketSansTTFLight;
+            src: url("./fonts/GmarketSansTTFLight.ttf");
+        }
+        @font-face {
+            font-family: GmarketSansTTFMedium;
+            src: url("./fonts/GmarketSansTTFMedium.ttf");
+        }
+        @font-face {
+            font-family: GmarketSansTTFBold;
+            src: url("./fonts/GmarketSansTTFBold.ttf");
+        }
+        @font-face {
+            font-family: MapoPeacefull;
+            src: url('./fonts/MapoPeacefull.ttf');
+        }
+    </style>
+    <!-- 기본 적용 css -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            position: relative;
+        }
+        ul, li , a{
+		    list-style: none;
+            text-decoration: none;
+	    }
+    </style>
+    <!-- main_hm_section => div 구간 style -->
+    <style>
+        #main_hm_section{
+            position: relative;
+            top: 0;
+        }
+    </style>
+<!--  script 서유빈 작성 -->    
+    <script>
+        $(pageLoadedHandler)
+        function pageLoadedHandler(){
+            //돋보기 버튼을 눌렀을 때
+            $("#searchbtn").on("click",function(){
+                $("#search_div").slideDown();      // 검색창이 내려오게
+                $("#cancel_btn_img").on("click",function(){ // x버튼을 누르면
+                    $("#search_div").slideUp();             // 검색창이 올라가게
+                });
+                $("#minus_header").on("click",function(){   // 헤더 제외 section을 눌러도
+                    $("#search_div").slideUp();             // 검색창이 올라가게
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+<!-- header 서유빈 작성 -->
+<header>
+    <div id="header_all">
+        <div id="logo">
+            <a href="./arrr_main.html">
+                <img src="./images/logo.svg">
+            </a>
+        </div> 
+        <div id="menu">   
+            <ul>
+                <li class="main_menu" id="product"> 
+                    <h3 class="main_menu_name">PRODUCT</h3>
+                    <ul class="dropdown_menu">
+                        <li><a href="#">all</a></li>
+                        <li><a href="#">new</a></li>
+                        <li><a href="#">living</a></li>
+                        <li><a href="#">walking</a></li>
+                        <li><a href="#">clean</a></li>
+                        <li><a href="#">food</a></li>
+                        <li><a href="#">sale</a></li>
+                    </ul>
+                </li>
+                <li class="main_menu">
+                    <h3 class="main_menu_name">│</h3>
+                    <ul class="dropdown_menu">
+                        <li> <li>
+                    </ul>
+                </li>
+                <li class="main_menu" id="editorial">
+                    <h3 class="main_menu_name">EDITORIAL</h3>
+                    <ul class="dropdown_menu">
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">lookbook </a></li>
+                        <li><a href="#">journal</a></li>
+                    </ul>
+                </li>
+                <li class="main_menu">
+                    <h3 class="main_menu_name">│</h3>
+                    <ul class="dropdown_menu">
+                        <li> <li>
+                    </ul>
+                </li>
+                <li class="main_menu" id="cscenter">
+                    <h3 class="main_menu_name">CS CENTER</h3>
+                    <ul class="dropdown_menu">
+                        <li><a href="#">cs home</a></li>
+                        <li><a href="#">review</a></li>
+                        <li><a href="#">event</a></li>
+                        <li><a href="#">notice</a></li>
+                        <li><a href="#">faq</a></li>
+                        <li><a href="#">q&a</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="sub">
+            <ul>
+                <li class="sub_menu">
+                    <a href="./arrr_login_info.html">로그인</a>
+                </li>
+                <li class="sub_menu">
+                    <a href="./arrr_login_info.html">회원가입</a>
+                </li>
+                <li class="sub_menu">
+                    <a href="./arrr_order_info.html">주문조회</a>
+                </li>
+            </ul>
+        </div>
+        <div id="ct">
+            <ul>
+                <li class="content_menu">
+                    <a href="#"><img src="./images/ico_search.svg" id="searchbtn"></a>
+                </li>
+                <li class="content_menu">
+                    <a href="#"><img src="./images/ico_recent.svg"></a>
+                </li>
+                <li class="content_menu">
+                    <a href="#"><img src="./images/ico_cart.svg"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="search_div">
+            <div id="search_cancel">
+                <a href="#"><img src="./images/ico_close.svg" id="cancel_btn_img"></a>
+            </div>
+
+            <div id="s_d">
+                <div>
+                    <input type="text" name="search" value=" ">
+                    <img src="./images/ico_search.svg">
+                </div>
+                <p>추천 검색어</p>
+                <div>
+                    <a href="#"><input type="button" value="UFO 넥카라"></a>
+                    <a href="#"><input type="button" value="고잉백"></a>
+                    <a href="#"><input type="button" value="꿀잠 방석"></a>
+                    <a href="#"><input type="button" value="논슬립 슬라이드 계단"></a>
+                </div>
+            </div>
+        </div>
+        <div id="back">
+        </div>
+    </div>
+</header>
+    <div id="minus_header">
+        <div id="main_hm_section">
+            <div> <!-- section 한 번에 묶기 -->
+
+<!-- section1. 이예린 작성 -->
+                <section id = "section1">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper section1-fixed" >
+                            <div class="swiper-slide" > 
+                                <div class="slide_img1">
+                                    <a href="#"><img src="./images/chew_mini_pc.jpg" alt=""></a>
+                                    <div class="text1">
+                                        <h1 class="hgg" style="color:#381a0b;">
+                                            한 입 크기의 영양간식!
+                                            <br>
+                                            뉴트리-츄 미니 출시
+                                            <pre> </pre>
+                                        </h1>
+                                        <p class="hgg1" style="color:#381a0b;">
+                                            건강한 것도 맛있게 먹이세요
+                                            <br>
+                                            런칭 기념 최대 30% 할인!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide_img2">
+                                    <a href="#"><img src="./images/nonslipmat_pc_2110.jpg" alt=""></a>
+                                    <div class="text2">
+                                        <h1 class="hgg" style="color: #fc7b5c">
+                                            밀리지 않는 편안함,
+                                            <br>
+                                            만족스러운 디자인까지
+                                            <pre> </pre>
+                                        </h1>
+                                        <p style="color:#fc7b5c;">
+                                            흐르지 않고 밀리지 않아
+                                            <br>
+                                            관리가 더욱 편해져요.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide_img3">
+                                    <a href="#"><img src="./images/poongbag_pc_1.jpg" alt=""></a>
+                                    <div class="text3">
+                                        <h1 class="hgg" style="color: #f0877a">
+                                            대세 이동가방, 포옹백
+                                            <br>
+                                            나왔다 하면 완판!
+                                            <pre> </pre>
+                                        </h1>
+                                        <p style="color:#f0877a;">
+                                            이동할 땐 가방으로,
+                                            <br>
+                                            휴식할 땐 방석으로!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide_img4">
+                                    <a href="#"><img src="./images/nonslipstep_pc.jpg" alt=""></a>
+                                    <div class="text4">
+                                        <h1 class="hgg" style="color: #444444;">
+                                            이렇게 예쁜 계단이?
+                                            <br>
+                                            펫테리어 필수템
+                                            <pre> </pre>
+                                        </h1>
+                                        <p style="color:#444444;">
+                                            높은 곳에서도 슬개골 탈구 없이
+                                            <br>
+                                            겨울 맞이 1+1 할인 중!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide_img5">
+                                    <a href="#"><img src="./images/cushionv2_main.jpg" alt=""></a>
+
+                                    <div class="text5">
+                                        <h1 class="hgg" style="color: #50685f;">
+                                            추운 날씨에 딱-
+                                            <br>
+                                            포근한 꿀잠 방석 v2
+                                            <pre> </pre>
+                                        </h1>
+                                        <p style="color:#50685f;">
+                                            우리 아이가 좋아하는 푹신함에
+                                            <br>
+                                            편안함까지 완벽하게 갖췄어요.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide_img6">
+                                    <a href="#"><img src="./images/ufo_main_pc.jpg" alt="" ></a>
+                                    <div class="text6">
+                                        <h1 class="hgg" style="color: #ffffff;">
+                                            편안함은 기본,
+                                            <br>
+                                            상처 보호까지 완벽하게
+                                            <pre> </pre>
+                                        </h1>
+                                        <p style="color:#ffffff;">
+                                            아이의 생활 패턴까지 고려해
+                                            <br>
+                                            더 편리하게 커버하는 아르르 UFO 넥카라
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide_img7">
+                                    <a href="#"><img src="./images/blanket_main.jpg" alt="" ></a>
+                                    <div class="text7">
+                                        <h1 class="hgg" style="color: #1E9E9E;">
+                                            겨울까지 포근하게
+                                            <br>
+                                            사계절 내내 꿀잠 이불
+                                            <pre> </pre>
+                                        </h1>
+                                        <p style="color: #1E9E9E;">
+                                            극세사 원단으로 푹신하고
+                                            <br>
+                                            냉감 원단은 시원해요.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </section>
+
+<!-- section2. 이소윤 작성 -->
+                <section id="section2">
+                    <div class="slider">
+                        <div class="slide-track">
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_1.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        뉴트리-츄미니
+                                    </h1>
+                                    <p>
+                                        한 입 크기의 영양간식
+                                        <br>
+                                        건강한 것도 맛있게 먹이세요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_2.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        꿀잠 이불
+                                    </h1>
+                                    <p>
+                                        극세사와 냉감 양면으로
+                                        <br>
+                                        사계절 내내 포근하게 꿀잠하세요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_3.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        논슬립 슬라이드 계단
+                                    </h1>
+                                    <p>
+                                        높은곳에도 슬개골 탈구 없이 편안하게.
+                                        <br>
+                                        미끄럽지 않은 논슬립 슬라이드 계단을 들여보세요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_4.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        마이핏 하네스 & 리쉬
+                                    </h1>
+                                    <p>
+                                        기도압박 없는 편안함.
+                                        <br>
+                                        견체공학 디자인의 마이핏하네스를 만나보세요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_5.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        꿀잠방석v2
+                                    </h1>
+                                    <p>
+                                        더 편안하고 포근해진
+                                        <br>
+                                        꿀잠방석으로 우리 아이에게 편안한 휴식을 주세요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_6.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        냐미냐미식기
+                                    </h1>
+                                    <p>
+                                        높낮이 조절로 불편한 식사는 안녕.
+                                        <br>
+                                        인테리어 포인트가 되어줄 냐미냐미식기에요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_7.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        덴탈츄 대용량
+                                    </h1>
+                                    <p>
+                                        맛있게 즐기는 구강관리. 압도적 재구매율 1위, 
+                                        <br>
+                                        덴탈츄를 대용량으로 즐기세요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_1.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        뉴트리-츄미니
+                                    </h1>
+                                    <p>
+                                        한 입 크기의 영양간식
+                                        <br>
+                                        건강한 것도 맛있게 먹이세요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_2.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        꿀잠 이불
+                                    </h1>
+                                    <p>
+                                        극세사와 냉감 양면으로
+                                        <br>
+                                        사계절 내내 포근하게 꿀잠하세요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_3.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        논슬립 슬라이드 계단
+                                    </h1>
+                                    <p>
+                                        높은곳에도 슬개골 탈구 없이 편안하게.
+                                        <br>
+                                        미끄럽지 않은 논슬립 슬라이드 계단을 들여보세요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_4.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        마이핏 하네스 & 리쉬
+                                    </h1>
+                                    <p>
+                                        기도압박 없는 편안함.
+                                        <br>
+                                        견체공학 디자인의 마이핏하네스를 만나보세요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_5.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        꿀잠방석v2
+                                    </h1>
+                                    <p>
+                                        더 편안하고 포근해진
+                                        <br>
+                                        꿀잠방석으로 우리 아이에게 편안한 휴식을 주세요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_6.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        냐미냐미식기
+                                    </h1>
+                                    <p>
+                                        높낮이 조절로 불편한 식사는 안녕.
+                                        <br>
+                                        인테리어 포인트가 되어줄 냐미냐미식기에요.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#">
+                                    <img src="./images/section2_7.jpg">
+                                    <h1>
+                                        아르르
+                                        <br>
+                                        덴탈츄 대용량
+                                    </h1>
+                                    <p>
+                                        맛있게 즐기는 구강관리. 압도적 재구매율 1위, 
+                                        <br>
+                                        덴탈츄를 대용량으로 즐기세요.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+<!-- section3. 이진정 작성-->
+                <div class="widthHolder">
+                    <div class="sectionT">ALL PRODUCT</div>
+                    <div class="prdList grid4-wrap">
+                        <div id="prd_01" class="grid-box" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202203/c8fec9580f7df5962c53bb5976d45147.jpg"class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202203/25c538b695adbc4ddd8d63fa4d631215.jpg" class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 마이핏 하네스 & 리쉬 라이트</span>
+                                    </h1>
+                                    <p><span class="origin_price">29,900원</span></p>
+                                    <p><span class="sale_price">25,900원</span></p>
+                                    <div class="color">
+                                        <span class="chips" title="#8CACD3" style="background-color:#8CACD3" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#ACA094" style="background-color:#ACA094" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#C4AFD0" style="background-color:#C4AFD0" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#E4AFA1" style="background-color:#E4AFA1" color_no="" displaygroup="2"></span>
+                                    </div>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_02" class="grid-box" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202203/faadf0834dffd7d5e2638a7b200f03a8.jpg"class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202203/76b389373e5f662d9259456bc306333a.jpg" class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">몬스터대학교 엠블럼&캐릭터 후디</span>
+                                    </h1>
+                                    <p><span class="origin_price">28,900원</span></p>
+                                    <p><span class="sale_price">20,900원</span></p>
+                                    <div class="color">
+                                        <span class="chips" title="#223D6E" style="background-color:#223D6E" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#CBEC70" style="background-color:#CBEC70" color_no="" displaygroup="2"></span>
+                                    </div>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_03" class="grid-box" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202202/e07fb31c84a8547bae668c69f3e57418.jpg"class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202202/ce271b3a04afd48e5ffb0dafd5b79275.jpg" class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 부비부빗</span>
+                                    </h1>
+                                    <p><span class="origin_price">16,900원</span></p>
+                                    <p><span class="sale_price">14,900원</span></p>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_04" class="grid-box" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202202/d03899391ff51b939919d9b15639d851.jpg"class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202201/59891841b7f860d9b1aaee6305d64a0d.jpg" class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 프리미엄 극세사 두부모래</span>
+                                    </h1>
+                                    <p><span class="origin_price">19,900원</span></p>
+                                    <p><span class="sale_price">13,500원</span></p>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_05" class="grid-box" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/small/202202/bd35303e9af129cecf45b0e71921bf1c.png"
+                                    class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202202/bd35303e9af129cecf45b0e71921bf1c.png" 
+                                    class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 산책 세트</span>
+                                    </h1>
+                                    <p><span class="sale_price">74,800원</span></p>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_06" class="grid-box" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202106/e41ef3a920338c5e9d5ebaeb470ac416.jpg"
+                                    class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202106/c21e447f1b22961be6470265951d7fb0.jpg" 
+                                    class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 NEW 리빙 세트</span>
+                                    </h1>
+                                    <p><span class="sale_price">69,900원</span></p>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_07" class="grid-box" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202101/53f78dd24c8beb453afb21992774b133.jpg"
+                                    class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202101/30d21a375ba1f57c96a99bae18e5a23d.jpg" 
+                                    class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 마이핏 하네스 & 리쉬</span>
+                                    </h1>
+                                    <p><span class="sale_price">32,900원</span></p>
+                                    <div class="color">
+                                        <span class="chips" title="#D4C7D9" style="background-color:#D4C7D9" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#A2C583" style="background-color:#A2C583" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#DCE0DC" style="background-color:#DCE0DC" color_no="" displaygroup="2"></span>
+                                    </div>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_08" class="grid-box" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202111/4ac1ba9c7a03656e9ba48ee6f035ae1a.jpg"
+                                    class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202105/d7702d600830e35a5a71130b885aef7a.jpg" 
+                                    class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 꿀잠 방석 v2</span>
+                                    </h1>
+                                    <p><span class="sale_price">69,900원</span></p>
+                                    <div class="color">
+                                        <span class="chips" title="#A3AC9B" style="background-color:#A3AC9B" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#CDA7A0" style="background-color:#CDA7A0" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#F1E5BE" style="background-color:#F1E5BE" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#A9A9A9" style="background-color:#A9A9A9" color_no="" displaygroup="2"></span>
+                                    </div>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_09" class="grid-box" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202111/7f61306035871345799672f258916ee8.jpg"
+                                    class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202101/4187f97f05c1ece914a428a6e35c4811.jpg" 
+                                    class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">논슬립 슬라이드 계단</span>
+                                    </h1>
+                                    <p><span class="origin_price">49,900원</span></p>
+                                    <p><span class="sale_price">39,900원</span></p>
+                                    <div class="color">
+                                        <span class="chips" title="#C1D0BE" style="background-color:#C1D0BE" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#E3C9CE" style="background-color:#E3C9CE" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#CECECE" style="background-color:#CECECE" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#2E4A62" style="background-color:#2E4A62" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#DECEBB" style="background-color:#DECEBB" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#DAD9DB" style="background-color:#DAD9DB" color_no="" displaygroup="2"></span>
+                                    </div>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_10" class="grid-box" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202111/0d9daab30aec82642999b8ff906f5dbf.jpg"
+                                    class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202106/d0b915f906e1c82b7b2522bf94077e6b.jpg" 
+                                    class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 꿀잠 이불</span>
+                                    </h1>
+                                    <p><span class="sale_price">39,900원</span></p>
+                                    <div class="color">
+                                        <span class="chips" title="#D4C7D9" style="background-color:#D4C7D9" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#A1B5D0" style="background-color:#A1B5D0" color_no="" displaygroup="2"></span>
+                                    </div>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_11" class="grid-box" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202201/bc2e42b9bb048abf464eeb824d365def.jpg"
+                                    class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202105/fb1344d0c952ae1f6323592db12d9e2a.jpg" 
+                                    class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 포옹백</span>
+                                    </h1>
+                                    <p><span class="sale_price">69,900원</span></p>
+                                    <div class="color">
+                                        <span class="chips" title="#2A294A" style="background-color:#2A294A" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#ABA093" style="background-color:#ABA093" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#E3C6B4" style="background-color:#E3C6B4" color_no="" displaygroup="2"></span>
+                                    </div>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_12" class="grid-box" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202111/b8b741d2587965a071466c0b284fdd81.jpg"
+                                    class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202105/bcb7a990b3758a19549ac4e0a011bf0d.jpg" 
+                                    class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">UFO 넥카라 v2</span>
+                                    </h1>
+                                    <p><span class="sale_price">16,900원</span></p>
+                                    <div class="color">
+                                        <span class="chips" title="#314673" style="background-color:#314673" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#B2B0BD" style="background-color:#B2B0BD" color_no="" displaygroup="2"></span>
+                                        <span class="chips" title="#E3C6B4" style="background-color:#E3C6B4" color_no="" displaygroup="2"></span>
+                                    </div>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="loadMore" style="background-color: transparent;">더보기</button>
+                    <div class="moreItems prdList2 grid4-wrap">
+                        <div id="prd_13" class="grid-box2" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202111/d96d07b9a0d30ffe86564a6dbd599973.png"
+                                    class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202101/ca476a5e42dc63dee97cb7163da52d33.jpg" 
+                                    class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 프리미엄 벤토나이트 모래</span>
+                                    </h1>
+                                    <p><span class="origin_price">29,900원</span></p>
+                                    <p><span class="sale_price">22,900원</span></p>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_14" class="grid-box2" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202111/b4192b51415294740bee76973a3a4848.jpg"
+                                    class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202101/d002c0351749b5d458457ee756153970.jpg" 
+                                    class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 프리미엄 두부모래</span>
+                                    </h1>
+                                    <p><span class="origin_price">19,900원</span></p>
+                                    <p><span class="sale_price">14,300원</span></p>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_15" class="grid-box2" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202111/daf50d31a7aee10d4882ba26a1b72043.jpg"
+                                    class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202101/2ceb816edb6f69c5ce4da5a184f79e39.jpg" 
+                                    class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 덴탈츄 대용량</span>
+                                    </h1>
+                                    <p><span class="sale_price">35,900원</span></p>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prd_16" class="grid-box2" style="overflow: hidden;">
+                            <div class="thumnail">
+                                <div class="prdImg">
+                                    <img src="https://arrr.kr/web/product/medium/202201/abe8961950f65a2cf8ed9201d522e7c0.jpg"
+                                    class="thum-1">
+                                    <img src="https://arrr.kr/web/product/small/202201/898a99461ea83bc8589536b13ce8f4b4.jpg" 
+                                    class="thum-2">
+                                </div>
+                                <div class="description">
+                                    <h1 class="name">
+                                        <span class="spanfont">아르르 독 치어 영양제</span>
+                                    </h1>
+                                    <p><span class="origin_price">25,000원</span></p>
+                                    <p><span class="sale_price">23,000원</span></p>
+                                </div>
+                                <div class="prdBag" >
+                                    <img src="https://arrr.kr/web/upload/icon_202012271433336300.png">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+<!-- section4. 이예린 작성 -->
+                <section id="section4">
+                    <div id="image_all">
+                        <div class="box_a">
+                            <div class="img_a">
+                                <img src="./images/motherk.jpg" alt data-position="center">
+                                <div class="section-txt_1" >
+                                    <h2 class="hgg_1">
+                                        JOURNAL
+                                        <br>
+                                    </h2>
+                                    <h1 class="hgg_2">
+                                        아기 태어나면
+                                        <br>
+                                        개는 다른 데로 보낼 거죠?
+                                    </h1>
+                                    <p class="hgg_3">
+                                        아르르와 마더케이가 함께 들려주는
+                                            <br>
+                                        애개육아 라이프 스타일
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box_b">
+                            <div class="img_b">
+                                <img src="./images/section4_blanket.jpg" alt data-position="center">
+                                <div class="section-txt_2" >
+                                    <h2 class="hgg2_1">
+                                        PRODUCT
+                                        <br>
+                                    </h2>
+                                    <h1 class="hgg2_2">
+                                        겨울까지 포근하게
+                                        <br>
+                                        사계절 내내 꿀잠 이불
+                                    </h1>
+                                    <p class="hgg2_3">
+                                        극세사 원단으로 푹신해서
+                                        <br>
+                                        더 따뜻하게 감싸줘요.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vidio-box">
+                        <video muted autoplay loop>
+                            <source
+                                src="https://player.vimeo.com/external/658300828.hd.mp4?s=49ccf93fc9cd55b5e3dda17426e50aa682a212a0&profile_id=174"
+                                type="video/mp4">
+                        </video>
+                        <div class="vedio_text">
+                            <h1 class="rnd" style="color: #fff3d3;">
+                                ARRR
+                                <br>
+                                WINTER FOREST
+                            </h1>
+                            <p style="color: #fff3d3;">
+                                추워도 따뜻한 산책길,
+                                <br>
+                                겨울숲 에디션 런칭
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+<!-- section5. 황선애 작성 -->
+                <section id = "section5">
+                    <div id = "setion5_tilte">
+                        RECOMMEND PRODUCT
+                    </div>
+                    <div id = "section5_product">
+                        <div id = "section5_product_wrapper">
+                            <div class="carousel-cell">
+                                <a href="#" class="section5_product_txt">
+                                    <h1>아르르 덴탈츄 대용량</h1>
+                                    <p>35,900원</p>
+                                    <img class="section5_img" src="./images/section5_1.png" >
+                                </a>
+                            </div>
+                            <div class="carousel-cell">
+                                <a href="#" class="section5_product_txt">
+                                    <h1>아르르 꿀잠 방석 v2</h1>
+                                    <p>69,900원</p>
+                                    <img class="section5_img" src="./images/section5_2.png">
+                                </a>
+                            </div>
+                            <div class="carousel-cell">
+                                <a href="#" class="section5_product_txt">
+                                    <h1>아르르 벤토나이트 모래</h1>
+                                    <p>29,900원</p>
+                                    <img class="section5_img" src="./images/section5_3.png">
+                                </a>
+                            </div>
+                            <div class="carousel-cell">
+                                <a href="#" class="section5_product_txt">
+                                    <h1>아르르 POO-POO 배변패드</h1>
+                                    <p>14,900원</p>
+                                    <img class="section5_img" src="./images/section5_4.png">
+                                </a>
+                            </div>
+                            <div class="carousel-cell">
+                                <a href="#" class="section5_product_txt">
+                                    <h1>아르르 넥카라</h1>
+                                    <p>16,900원</p>
+                                    <img class="section5_img" src="./images/section5_5.png">
+                                </a>
+                            </div>
+                            <div class="carousel-cell">
+                                <a href="#" class="section5_product_txt">
+                                    <h1>아르르 꿀잠 이불(쿨매트)</h1>
+                                    <p>39,900원</p>
+                                    <img class="section5_img" src="./images/section5_6.png">
+                                </a>
+                            </div>
+                        </div>
+                        <button id="section5_prev_button" onclick="prev_product();"><img src="./images/prev_button.png" width="30"></button>
+                        <button id="section5_next_button" onclick="next_product();"><img src="./images/next_button.png" width="30"></button>
+                    </div>
+                </section>
+
+<!-- section6. 황선애 작성 -->
+                <section id="section6">
+                    <img src="./images/section6.jpg" id="brand_photo">
+                    <div id="brand_txt">
+                        <h1>
+                            아르르와 함께하는
+                            <br>
+                            소중한 일상으로의 초대
+                        </h1>
+                        <a href="./arrr_about_info.html">브랜드 스토리 보러가기</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+<!-- footer 이소윤 작성 -->
+        <footer>
+                <div id="fixedToTop">
+                    <a href="#header_all" class="totop">
+                        <img src="./images/btn_top.svg">
+                    </a>
+                </div>
+                <div class="footerTop">
+                    <div class="footerTop_space">&nbsp;</div>
+                    <div class="footerTop_text">
+                        <a href="#1">브랜드스토리 | </a>
+                        <a href="#1"> 이용약관 | </a>
+                        <a href="#1"> 개인정보처리방침 | </a>
+                        <a href="#1"> 이용안내</a>
+                    </div>
+                    <div class="footerTop_icon">
+                        <a class="social_icon" href="//pf.kakao.com/_Gxgbas/chat" target="_blank">
+                            <img src="./images/ico_kakaotalk.svg">
+                        </a>
+                        <a class="social_icon" href="https://www.instagram.com/arrr_official/" target="_blank">
+                            <img src="./images/ico_instagram.svg">
+                        </a>
+                        <a class="social_icon" href="https://www.facebook.com/Arrr-%EC%95%84%EB%A5%B4%EB%A5%B4-1665445193561447/" target="_blank">
+                            <img src="./images/ico_facebook.svg">
+                        </a>
+                        <a class="social_icon" href="https://www.youtube.com/channel/UCQREukW3CURgQMAWnFsjW9Q" target="_blank">
+                            <img src="./images/ico_youtube.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="footerBottom">
+                    <div class="footerBottom_section1">
+                        <h1>02 - 6951 - 2688</h1>
+                        <div>
+                            <p>AM 09:00 ~ PM 18:00</p>
+                            <p>PM 12:00 ~ 13:00 (Lunch)</p>
+                            <p>SAT, SUN, HOLIDAY OFF</p>
+                            <br>
+                            <p>CS Email. arrr@meta-m.co.kr</p>
+                            <p>카카오톡 플러스친구. @아르르</p>
+                        </div>
+                    </div>
+                    <div class="footerBottom_section2">
+                        <h1>BANK INFO</h1>
+                        <div>
+                            <p>BANK 신한은행 140-011-787430</p>
+                            <p>예금주 : (주)블랭크코퍼레이션</p>
+                        </div>
+                        <br>
+                        <br>
+                        <h1>아르르 사업 문의</h1>
+                        <div>
+                            <p>마케팅제휴 문의 : arr_biz@blankcorp.co.kr</p>
+                            <p>해외수출 문의 : global@blankcorp.kr</p>
+                            <a href="#1">사입/도매/입점 문의 바로가기 > </a>
+                        </div>
+                    </div>
+                    <div class="footerBottom_section3">
+                        <a href="./arrr_main.html">
+                            <img src="./images/footer_logo.svg">
+                        </a>
+                        <p>BLANK Corporation</p>
+                        <p>CEO. DaeKwangNam | TEL. 02-6951-2688 | E-MAIL. arrr_biz@blankcorp.kr</p>
+                        <p>ADDRESS. 3th floor, 311, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea, 06151</p>
+                        <p>
+                            BUSINESS NO. 359-87-00301 | MAIL ORDER LICENSE. 제2016-서울강남-01468호 
+                            <a href="#1">[사업자정보확인]</a>
+                        </p>
+                        <br>
+                        <p>&copy; 2020</p>
+                    </div>
+                </div>
+        </footer>
+    </div>
+<!-- 이예린 section1 좌,우 버튼 및 스크롤바 스크립트 -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            scrollbar: { // 스크롤바
+                el: '.swiper-scrollbar',
+                // draggable : true, // 스크롤바를 드래그해서 움직일수 있는지 여부
+            },
+        });
+    </script>
+
+<!-- 이진정 section3 더보기 및 감추기 버튼 클릭 스크립트 -->
+    <script>
+        var isOpen = false;
+        var loadMore = document.querySelector("#loadMore");  // #loadMore 요소를 가져옴
+        loadMore.addEventListener("click", function() {
+            if (isOpen == false) {  // 상세 정보가 감춰져 있다면 
+                document.querySelector(".moreItems").style.display = "grid";  // 더많은 아이템을 화면에 표시
+                // document.querySelector(".moreItems").style.grid-auto-columns;  
+                loadMore.innerHTML = "감추기";  // 링크 내용 수정
+                isOpen = true;  // 표시 상태로 지정
+            }
+            else {  // 상세 정보가 표시되어 있다면 
+                document.querySelector(".moreItems").style.display = "none";  // 상세 정보를 화면에서 감춤
+                loadMore.innerHTML = "더보기";  // 링크 내용 수정
+                isOpen = false;  // 감춰진 상태로 지정
+            }
+        });
+    </script>
+
+<!-- 황선애 section5 버튼 좌우 버튼 클릭 스크립트 -->
+    <script>
+        var slides = document.querySelector('#section5_product_wrapper'), // 사진을 감싸고 있는 div
+            slide = document.querySelectorAll('.carousel-cell'), // 사진 하나하나
+            currentIdx = 0, // 현재 보고 있는 사진 숫자
+            slideCount = slide.length, // 전체 사진 숫자
+            slideWidth = 400; // 슬라이드 하나의 너비
+        makeClone(); // 복사본 만드는 함수
+            
+        function makeClone() {
+            for(var i = 0; i < slideCount; i++){
+                var cloneSlide = slide[i].cloneNode(true); // 사진 하나하나의 자식 요소까지 모두 복사(true 입력해서)
+                cloneSlide.classList.add('clone'); // 복제된 요소에 clone 클래스라는 이름 부여
+                slides.appendChild(cloneSlide); // 사진을 감싸고 있는 div 뒤 쪽에 복제된 요소 추가
+            }
+            for(var i = slideCount - 1; i >= 0; i--){
+                var cloneSlide = slide[i].cloneNode(true); // 사진 하나하나의 자식 요소까지 모두 복사(true 입력해서)
+                cloneSlide.classList.add('clone'); // 복제된 요소에 clone 클래스라는 이름 부여
+                slides.prepend(cloneSlide); // 사진을 감싸고 있는 div 앞 쪽에 복제된 요소 추가
+            }
+            updateWidth();
+            setInitalPos();
+            // 원래 사진 배치이동 안 보이게 하기 위해 타이머 설정
+            setTimeout(function() {
+                slides.classList.add('animated');
+            }, 100);
+        };
+            
+        // 복사본 추가된 가로길이 계산
+        function updateWidth(){
+            var currentSlides = document.querySelectorAll('.carousel-cell');
+            var newSlideCount = currentSlides.length;
+            
+            var newWidth = slideWidth * newSlideCount + 'px';
+            slides.style.width = newWidth;
+        }
+        // 위치 잡기(원래 사진이 보여지게)
+        function setInitalPos(){
+            var initialTranslateValue = -(slideWidth * slideCount);
+            slides.style.transform = 'translateX(' + initialTranslateValue + 'px)';
+        }
+        function prev_product() {
+            moveSlide(currentIdx - 1);
+        };
+        function next_product() {
+            moveSlide(currentIdx + 1);
+        };
+        // 슬라이드 이동
+        function moveSlide(num){
+            slides.style.left = -num * slideWidth + 'px';
+            currentIdx = num;
+            console.log(currentIdx, slideCount);
+            // 현재 사진이 모두 넘겨지면 복제본이 보이게 되는데 이를 다시 현재 사진으로 변경 
+            if(currentIdx == slideCount || currentIdx == -slideCount){
+                setTimeout(function(){
+                    slides.classList.remove('animated');
+                    slides.style.left = 0;
+                    currentIdx = 0;
+                }, 500);
+                setTimeout(function(){
+                    slides.classList.add('animated');
+                }, 600);
+            }
+        }
+    </script>
+</body>
+</html>

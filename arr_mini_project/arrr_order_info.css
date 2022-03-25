@@ -1,0 +1,218 @@
+/* 이소윤 단독 작성 */
+
+
+#minus_header {
+    top: 150px;
+}
+#member_order_section button, #nonmember_order_section button {
+    /* 버튼 위로 마우스 커서 이동 시 마우스 커서 화살표로 변경 */
+    cursor: pointer;
+}
+#member_order_section input::placeholder, #nonmember_order_section input::placeholder {
+    /* input 태그의 placeholder 색상 및 글자 */
+    color: #a9c4c1;
+    font-family: GmarketSansTTFLight;
+}
+/* 주문조회_로그인 */
+#member_order_section {
+    width: 30%;
+    margin: 0 auto;
+}
+#member_page_title {
+    font-family: MapoPeacefull;
+    font-size: 20px;
+    color: #477A7B;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#member_info {
+    overflow: hidden;
+}
+/* 로그인 시 입력해야 할 input */
+#member_info > input {
+    box-sizing: border-box;
+    border: 0 none;
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    background-color: #dfe9e8;
+    color: #477a7b;
+    font-size: 15px;
+}
+
+#member_info > a {
+    /* 비밀번호 입력 밑의 기억이 나지않으신가요 부분 */
+    float: right;
+    text-decoration: underline;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: GmarketSansTTFMedium;
+    color: #477a7b;
+    margin-bottom: 20px;
+}
+#member_info > .clear {
+    clear: both;
+    text-align: center;
+}
+#member_info > .clear > div > button {
+    /* 로그인 및 회원가입 버튼의 크기, 글자 설정 */
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-family: GmarketSansTTFMedium;
+}
+#member_info > .clear > div:first-of-type > button {
+    /* 로그인 버튼 */
+    background-color: #477a7b;
+    border: 1px solid #477a7b;
+}
+#member_info > .clear > div:first-of-type > button:hover {
+    /* 로그인 버튼에 마우스 호버 시 배경색 진하게 변경 */
+    background-color: #2f6566;
+}
+#member_info > .clear > div:first-of-type > button > a {
+    /* 로그인 버튼 내_글씨 */
+    color: #fff;
+}
+#member_info > .clear > div:last-of-type > button {
+    /* 회원가입 버튼 */
+    background-color: #fff;
+    border: 1px solid #477a7b;
+}
+#member_info > .clear > div:last-of-type > button > a {
+    /* 회원가입 버튼 내_글씨 */
+    color: #477a7b;
+}
+#member_info > #sns_login {
+    overflow: hidden;
+}
+#member_info > #sns_login > div:first-child > button {
+    /* 카카오톡 가입 버튼*/
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 2px;
+    background-color: #fee500;
+    border: 0;
+}
+#member_info > #sns_login > div:first-child > button:hover {
+    opacity: 0.5;
+}
+#member_info > #sns_login > div:first-child > button > a {
+    /* 카카오톡 가입 버튼 내_글씨*/
+    color: black;
+    text-align: center;
+    font-family: 'GmarketSansTTFMedium';
+}
+#member_info > #sns_login > #kakaoMsg {
+    /* 카카오톡 가입 버튼 밑의 설명 */
+    background-color: #fee500;
+    text-align: center;
+    font-family: 'GmarketSansTTFMedium';
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+#member_info > #sns_login > #kakaoMsg > p:first-of-type {
+    /* 카카오톡 가입 버튼 밑의 설명 내_ 카카오톡 2천원 할인쿠폰 증정 글씨 */
+    font-weight: bold;
+    font-size: 13px;
+}
+#member_info > #sns_login > #kakaoMsg > p:last-of-type {
+    /* 카카오톡 가입 버튼 밑의 설명 내_ 마케팅 수신 글씨 */
+    font-size: 10px;
+}
+#member_info > #sns_login > #naver_login {
+    /* 네이버 로그인 버튼 */
+    width: 50%;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    background-color: #1ec800;
+    font-family: 'GmarketSansTTFMedium';
+    cursor: pointer;
+}
+#member_info > #sns_login > #naver_login:hover {
+    /* 네이버 로그인 버튼 마우스 오버 시 투명하게 */
+    opacity: 0.5;
+}
+#member_info > #sns_login > #naver_login > a {
+    /* 네이버 로그인 버튼 내_글씨 */
+    color: #fff;
+}
+#member_info > #sns_login > #facebook_login {
+    /* 페이스북 로그인 버튼 */
+    width: 50%;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    background-color: #3a5ca9;
+    color: #fff;
+    font-family: 'GmarketSansTTFMedium';
+    cursor: pointer;
+}
+#member_info > #sns_login > #facebook_login:hover {
+    /* 페이스북 로그인 버튼 마우스 오버 시 투명하게 */
+    opacity: 0.5;
+}
+#member_info > #sns_login > #facebook_login > a {
+    /* 페이스북 로그인 버튼 내_글씨 */
+    color: #fff;
+}
+
+/* 비회원 주문 조회 */
+#nonmember_order_section {
+    clear: both;
+    width: 30%;
+    margin: 0 auto;
+}
+#nonmember_page_title > h3 {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'GmarketSansTTFMedium';
+    color: #296566;
+    margin: 60px 0 15px;
+}
+#nonmember_page_title > p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6em;
+    font-family: 'GmarketSansTTFLight';
+    color: #4c4c4c;
+    margin: 0 auto 30px;
+}
+#nonmember_info > input {
+    /* 비회원 주문조회 시 입력해야 할 input */
+    box-sizing: border-box;
+    border: 0 none;
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    background-color: #dfe9e8;
+    color: #477a7b;
+    font-size: 15px;
+}
+#nonmember_info > button {
+    /* 주문조회 버튼 */
+    border: 1px solid #477a7b;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-family: GmarketSansTTFMedium;
+    background-color: #477a7b;
+}
+#nonmember_info > button:hover {
+    /* 주문조회 버튼에 마우스 호버 시, 배경 색 더 진하게 */
+    background-color: #2f6566;
+}
+#nonmember_info > button > a {
+    /* 주문조회 버튼 내_글씨 */
+    color: #fff;
+}

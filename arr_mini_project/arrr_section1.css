@@ -1,0 +1,175 @@
+/* 이예린 단독 작성 */
+
+/* 이미지 좌,우로 움직이는 버튼 크기 및 색상 조정 */
+.swiper-button-next, .swiper-button-prev, .swiper-scrollbar{
+    size: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #7e7e7e;
+}
+/* swiper 이미지 배치조정  */
+#section1 .swiper {
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    overflow: hidden;
+}
+#section1 .section1-fixed {
+    height: 80vh;
+}
+#section1 .swiper-slide {
+    font-size: 28px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+    font-family: GmarketSansTTFMedium;
+}
+#section1 .section1 img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* swiper 슬라이드 이미지 */
+#section1 .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 507.2px;
+}
+/*슬라이드 7개 텍스트 배치 */
+#section1 .slide_img1 > .text1 {
+    width: 100%;
+    position: absolute;
+    top: 42%;
+    left: 10%;
+    text-align: left;
+}
+#section1 .slide_img1 > .text1 > h1 {
+    font-size: 45px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img1 > .text1 > p {
+    font-size: 18px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img2 > .text2 {
+    width: 100%;
+    position: absolute;
+    top: 42%;
+    left: 10%;
+    text-align: left;
+}
+#section1 .slide_img2 > .text2 > h1 {
+    font-size: 45px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img2 > .text2 > p {
+    font-size: 18px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img3 > .text3 {
+    width: 100%;
+    position: absolute;
+    top: 42%;
+    left: 10%;
+    text-align: left;
+}
+#section1 .slide_img3 > .text3 > h1 {
+    font-size: 45px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img3 > .text3 > p {
+    font-size: 18px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img4 > .text4 {
+    width: 100%;
+    position: absolute;
+    top: 42%;
+    left: 10%;
+    text-align: left;
+}
+#section1 .slide_img4 > .text4 > h1 {
+    font-size: 45px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img4 > .text4 > p {
+    font-size: 18px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img5 > .text5 {
+    width: 100%;
+    position: absolute;
+    top: 42%;
+    left: 10%;
+    text-align: left;
+}
+#section1 .slide_img5 > .text5 > h1 {
+    font-size: 45px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img5 > .text5 > p {
+    font-size: 18px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img6 > .text6 {
+    width: 100%;
+    position: absolute;
+    top: 42%;
+    left: 10%;
+    text-align: left;
+}
+#section1 .slide_img6 > .text6 > h1 {
+    font-size: 45px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img6 > .text6 > p {
+    font-size: 18px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img7 > .text7 {
+    width: 100%;
+    position: absolute;
+    top: 42%;
+    left: 10%;
+    text-align: left;
+}
+#section1 .slide_img7 > .text7 > h1 {
+    font-size: 45px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
+#section1 .slide_img7 > .text7 > p {
+    font-size: 18px;
+    font-family: 'GmarketSansTTFMedium';
+    font-weight: lighter;
+}
